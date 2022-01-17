@@ -1,0 +1,29 @@
+{
+  "name": "hazcomunidad.com",
+  "version": "1.0.0",
+  "description": "WebSite de Haz Comunidad (hazcomunidad.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusmemije/hazcomunidad.com.git"
+  },
+  "keywords": [
+    "WebSite",
+    "HazComunidad",
+    "PICESoftware",
+    "Site",
+    "Development"
+  ],
+  "author": "Jesús González Memije",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesusmemije/hazcomunidad.com/issues"
+  },
+  "homepage": "https://github.com/jesusmemije/hazcomunidad.com#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
