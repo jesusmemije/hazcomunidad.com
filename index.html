@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Haz Comunidad</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Core styles -->
     <link rel="stylesheet" href="css/styles.css?v=1.0.0">
 </head>
 <body>
@@ -209,7 +210,12 @@
                     <div class="content-section-bottom w-100">
                         <div class="row mx-0">
                             <div class="col-md-12 px-0 text-center">
-                                <img src="img/section-10/ilustracion.png" class="img-fluid">
+                                <!-- Image Map -->
+                                <img src="img/section-10/ilustracion.png" class="img-fluid" usemap="#image-map">
+                                <map name="image-map">
+                                    <area target="_blank" alt="Facebook - Haz Comunidad" title="Facebook - Haz Comunidad" href="https://www.facebook.com/hazcomunidad" coords="593,20,594,39,605,54,625,63,642,58,652,44,652,25,640,7,623,0,603,5" shape="poly">
+                                    <area target="_blank" alt="Instragram - Haz Comunidad" title="Instragram - Haz Comunidad" href="https://www.instagram.com/hazcomunidad" coords="673,53,688,61,708,63,723,54,725,39,725,20,713,7,683,3,671,12,666,32" shape="poly">
+                                </map>
                             </div>
                         </div>
                     </div>
@@ -217,6 +223,10 @@
             </div>
         </div>
     </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/image-map-resizer/js/imageMapResizer.min.js"></script>
+    <!-- Core js -->
+    <script src="js/app.js?v=1.0.0"></script>
 </body>
 </html>

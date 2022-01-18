@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/jesusmemije/hazcomunidad.com#readme",
   "dependencies": {
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^5.1.3",
+    "image-map-resizer": "^1.0.10",
+    "jquery": "^3.6.0"
   }
 }
