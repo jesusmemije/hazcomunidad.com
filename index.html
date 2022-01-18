@@ -6,12 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Haz Comunidad</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .items-section {
+            position: relative;    /* para poder posicionar el texto de forma absoluta */
+            display: inline-block; /* para que solo ocupe el ancho de la imagen */
+        }
+
+        .content-section-1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centar div */
+        }
+
+        .content-section-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centar div */
+        }
+
+        .w-60 {
+            width: 60% !important;
+        }
+
+        .w-70 {
+            width: 70% !important;
+        }
+
+        .w-80 {
+            width: 80% !important;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
+        <!-- Section 1 -->
         <div class="row">
-            <div class="col">
-                
+            <div class="col-12 col-md-12 px-0">
+                <div class="items-section">
+                    <img class="img-fluid" src="img/section-1/bg-and-clouds.jpg">
+                    <div class="content-section-center">
+                        <img src="img/section-1/icon.png" class="img-fluid mb-2">
+                        <img src="img/section-1/text.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section 2 -->
+        <div class="row">
+            <div class="col-12 col-md-12 px-0">
+                <div class="items-section">
+                    <img class="img-fluid" src="img/section-2/bg.jpg">
+                    <div class="content-section-center w-100">
+                        <div class="row mx-0 mb-5">
+                            <div class="col-10 col-md-8 offset-1 offset-md-2 text-center">
+                                <img src="img/section-2/text.png" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row mx-0">
+                            <div class="col-4 col-md-3 offset-2 offset-md-2 text-center">
+                                <img src="img/section-2/item-1.png" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-md-3 offset-md-2 text-center">
+                                <img src="img/section-2/item-2.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Section 3 -->
+        <div class="row">
+            <div class="col-md-12 px-0">
+                <div class="items-section">
+                    <img class="img-fluid" src="img/section-3/bg.jpg">
+                    <div class="content-section-center w-100">
+                        <div class="row mx-0 mb-5">
+                            <div class="col-10 col-md-8 offset-1 offset-md-2 text-center">
+                                <img src="img/section-3/text.png" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row mx-0">
+                            <div class="col-4 col-md-3 offset-2 offset-md-2 text-center">
+                                <img src="img/section-3/miedo.png" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-md-3 offset-md-2 text-center">
+                                <img src="img/section-3/terror.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
