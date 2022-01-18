@@ -1,0 +1,47 @@
+.items-section {
+  position: relative; /* para poder posicionar el texto de forma absoluta */
+  display: inline-block; /* para que solo ocupe el ancho de la imagen */
+}
+
+.content-section-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centar div */
+}
+
+.content-section-center-vertically {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content-section-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.interrogacion-mundo {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.w-interragacion-mundo {
+  width: 70%;
+}
+
+@media only screen and (max-width: 576px) {
+  .w-interragacion-mundo {
+    width: 30%;
+  }
+
+  .interrogacion-mundo {
+    top: 10px;
+    left: 10px;
+  }
+}
