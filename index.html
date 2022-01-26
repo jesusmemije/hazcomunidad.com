@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
     <!-- Core styles -->
-    <link rel="stylesheet" href="css/styles.css?v=1.0.1">
+    <link rel="stylesheet" href="css/styles.css?v=1.0.3">
 </head>
 <body>
     <div class="container-fluid">
+        <!-- Floating icon -->
+        <div class="container-floating">
+            <img src="img/hazcomunidad.png" data-bs-toggle="modal" data-bs-target="#openSendManual" class="w-100 cursor-pointer">
+        </div>
         <!-- Section 1 -->
         <div class="row">
             <div class="col-12 col-md-12 px-0">
                 <div class="items-section">
                     <img class="img-fluid h-bg" src="img/section-1/bg-and-clouds.jpg">
                     <div class="content-section-center w-100">
-                        <div class="row mx-0 mb-2 mb-md-4">
+                        <div class="row mx-0 mb-3 mb-md-5">
                             <div class="col-8 offset-2 col-md-6 offset-md-3 text-center">
                                 <img src="img/section-1/icon.png" class="img-fluid">
                             </div>
@@ -82,7 +86,7 @@
         <div class="row">
             <div class="col-md-12 px-0">
                 <div class="items-section">
-                    <img class="img-fluid h-bg" src="img/section-4/bg.jpg">
+                    <img class="img-fluid h-bg-section-4" src="img/section-4/bg.jpg">
                     <div class="interrogacion-mundo">
                         <img src="img/section-4/planeta-interrogacion.png" class="img-fluid w-interragacion-mundo">
                     </div>
@@ -113,7 +117,7 @@
         <div class="row">
             <div class="col-12 col-md-12 px-0">
                 <div class="items-section">
-                    <img class="img-fluid h-bg" src="img/section-5/bg.jpg">
+                    <img class="img-fluid h-bg-section-5" src="img/section-5/bg.jpg">
                     <div class="content-section-center-vertically w-100">
                         <div class="row mx-0 mb-3 mb-md-5">
                             <div class="col-md-12 px-0">
@@ -162,7 +166,7 @@
                         </div>
                         <div class="row mx-0">
                             <div class="col-6 offset-3 col-md-4 offset-md-4 text-center">
-                                <img id="openSendManual" src="img/section-7/btn-descargar.png" class="img-fluid" style="cursor: pointer;">
+                                <img src="img/section-7/btn-descargar.png" data-bs-toggle="modal" data-bs-target="#openSendManual" class="img-fluid cursor-pointer">
                             </div>
                         </div>
                     </div>
@@ -213,7 +217,7 @@
         <div class="row">
             <div class="col-12 col-md-12 px-0">
                 <div class="items-section">
-                    <img class="img-fluid h-bg" src="img/section-10/bg.jpg">
+                    <img class="img-fluid h-bg-section-10" src="img/section-10/bg.jpg">
                     <div class="content-section-bottom w-100">
                         <div class="row mx-0">
                             <div class="col-md-12 px-0 text-center">
@@ -230,11 +234,42 @@
             </div>
         </div>
     </div>
+    <!-- Modal send manual -->
+    <div class="modal fade" id="openSendManual" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-config-form">
+                <div class="modal-body p-0">
+                    <div class="row">
+                        <div class="col-12 col-md-12 px-0">
+                            <div class="items-section">
+                                <img class="img-fluid h-bg" src="img/form/bg.png">
+                                <div class="content-input-email">
+                                    <div class="row mx-0">
+                                        <div class="col-md-12 px-0 text-center">
+                                            <input type="text" id="input-email" placeholder="Ingrese su correo electrónico" class="form-control form-input-email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-btn-enviar w-100">
+                                    <div class="row mx-0">
+                                        <div class="col-md-12 px-0 text-center">
+                                            <img id="btn-enviar" src="img/form/btn-enviar.png" class="img-fluid cursor-pointer" style="width: 34%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules/image-map-resizer/js/imageMapResizer.min.js"></script>
     <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
     <!-- Core js -->
-    <script src="js/app.js?v=1.0.1"></script>
+    <script src="js/app.js?v=1.0.2"></script>
 </body>
 </html>

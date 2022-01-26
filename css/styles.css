@@ -35,8 +35,54 @@
   width: 70%;
 }
 
-.h-bg {
+.h-bg,
+.h-bg-section-4,
+.h-bg-section-5,
+.h-bg-section-10 {
   height: auto;
+}
+
+.container-floating {
+  position: fixed;
+  width: 14%;
+  bottom: 50px;
+  left: 50px;
+  z-index: 10;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.modal-config-form {
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+}
+
+.content-btn-enviar {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  transform: translateX(-50%);
+}
+
+.content-input-email {
+  position: absolute;
+  width: 70%;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+}
+
+.form-input-email {
+  border: unset;
+  padding: 1rem 0.75rem;
+}
+
+.form-input-email:focus {
+  border-color: unset;
+  box-shadow: unset;
 }
 
 @media only screen and (max-width: 576px) {
@@ -51,5 +97,20 @@
 
   .h-bg {
     height: 300px;
+  }
+
+  .h-bg-section-4,
+  .h-bg-section-10 {
+    height: 240px;
+  }
+
+  .h-bg-section-5 {
+    height: 260px;
+  }
+
+  .container-floating {
+    width: 24%;
+    bottom: 10px;
+    left: 10px;
   }
 }

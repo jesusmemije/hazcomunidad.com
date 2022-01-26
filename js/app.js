@@ -4,50 +4,42 @@ $(document).ready(function() {
     $('map').imageMapResize();
 
     // Send Manual
-    $( "#openSendManual" ).click(function() {
-        Swal.fire({
-            icon: 'question',
-            title: 'Ingresa tu email para enviarte el manual gratuito',
-            input: 'email',
-            inputAttributes: {
-                autocapitalize: 'off'
-            },
-            inputPlaceholder: 'example@mail.com',
-            showCancelButton: true,
-            cancelButtonText: 'Cancelar',
-            confirmButtonText: 'Enviar manual',
-            showLoaderOnConfirm: true,
-            preConfirm: (mail) => {
-                return fetch(`api/send-manual.php?email=${mail}`)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(response.statusText)
-                    }
-                    return response.json()
-                })
-                .catch(error => {
-                    Swal.showValidationMessage(
-                        `Request failed: ${error}`
-                    )
-                })
-            },
-            allowOutsideClick: () => !Swal.isLoading()
-        }).then((result) => {
-            if (result.isConfirmed) {
-                if(  result.value.ok ) {
-                    Swal.fire(
-                        '¡Hecho!',
-                        result.value.message,
-                        'success'
-                    )
-                } else {
-                    Swal.fire(
-                        '¡Error!',
-                        result.value.message,
-                        'error'
-                    )
-                }
+    $("#btn-enviar").click('click', function (event) { 
+        event.preventDefault(); 
+        $(this).prop('disabled', true);
+
+        var email = $('#input-email').val();
+
+        if ( email.length <= 0 ) {
+            Swal.fire( '¡Info!', 'El correo electrónico es requerido', 'info')
+            return false;
+        }
+
+        if ( !ValidateEmail( email ) ) {
+            Swal.fire( '¡Advertencia!', 'El correo electrónico es inválido', 'warning')
+            $('#input-email').val('')
+            return false;
+        }
+
+        $.get('api/send-manual.php', { email: email },
+        function(response) {
+            response = JSON.parse( response )
+            if (response.ok) {
+                Swal.fire( '¡Enviado!', response.message, 'success')
+                $('#input-email').val('')
+            } else {
+                Swal.fire( '¡Error!', response.message, 'error')
             }
-        })
+        });
+
+        $(this).prop('disabled', false);
     });
 });
+
+function ValidateEmail(mail) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+        return true;
+    } else {
+        return false;
+    }
+}

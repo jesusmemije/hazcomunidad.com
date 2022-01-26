@@ -1,5 +1,7 @@
 <?php
-    
+    /* Permitimos a cualquier origen acceder a este API de manera remota */
+    header('Access-Control-Allow-Origin: *');
+
     if ( isset($_GET['email']) && !empty($_GET['email']) ) {
 
         if ( sendEmailManual( $_GET['email'] ) ) {
