@@ -49,9 +49,9 @@
 
 .container-floating {
   position: fixed;
-  width: 14%;
+  width: 12%;
   bottom: 50px;
-  left: -14%;
+  left: -12%;
   z-index: 10;
   transition: all 450ms ease-in-out;
 }
@@ -119,7 +119,7 @@
   }
 
   .container-floating {
-    width: 28%;
+    width: 24%;
     bottom: 10px;
     left: 10px;
   }
