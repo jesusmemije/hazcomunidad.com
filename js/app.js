@@ -22,8 +22,13 @@ $(document).ready(function() {
             return false;
         }
 
+        $( '.loading' ).css( "display", "block" );
+
         $.get('api/send-manual.php', { email: email },
         function(response) {
+
+            $( '.loading' ).css( "display", "none" );
+            
             response = JSON.parse( response )
             if (response.ok) {
                 Swal.fire( '¡Enviado!', response.message, 'success')
