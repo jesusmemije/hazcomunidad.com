@@ -9,6 +9,7 @@ $(document).ready(function() {
         $(this).prop('disabled', true);
 
         var email = $('#input-email').val();
+        email = email.trim();
 
         if ( email.length <= 0 ) {
             Swal.fire( '¡Info!', 'El correo electrónico es requerido', 'info')

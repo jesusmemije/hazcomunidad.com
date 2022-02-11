@@ -26,16 +26,16 @@
         $fromName = 'Haz Comunidad'; 
         
         // Email subject 
-        $subject = 'Manual gratuito para hacer comunidad';
+        $subject = 'Manual para hacer comunidad';
         
         // Attachment file
         $file = '../file/manual-haz-comunidad.pdf';
         
         // Email body content 
         $htmlContent = '
-            <p>Queremos compartirte un <strong>MANUAL GRATUITO</strong>, para que conozcas todo lo que puedes hacer para involucrarte en tu comunidad.</p>
+            <p>En este manual te hablamos de cómo puedes involucrarte en tu comunidad</p>
             <br>
-            <p>- Atentamente Equipo de Haz Comunidad</p>
+            <p>- Equipo de Haz Comunidad</p>
         '; 
         
         // Header for sender info 
